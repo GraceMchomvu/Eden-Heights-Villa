@@ -1,0 +1,1020 @@
+/* Eden Heights Villa — brand overrides */
+
+.eden-logo {
+    display: inline-block;
+    text-decoration: none !important;
+    line-height: 1.15;
+    vertical-align: middle;
+}
+
+.eden-logo .eden-name {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #1a3a2a;
+}
+
+.eden-logo .eden-tag {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a6d3b;
+    margin-top: 2px;
+}
+
+#header-2 .eden-logo .eden-name,
+.banner-2 ~ * .eden-logo .eden-name,
+.full-header .eden-logo .eden-name,
+.reserve-hotel .eden-logo .eden-name,
+.search-open .eden-logo .eden-name,
+.full-navgtion .eden-logo .eden-name {
+    color: #fff;
+}
+
+#header-2 .eden-logo .eden-tag,
+.full-header .eden-logo .eden-tag,
+.reserve-hotel .eden-logo .eden-tag,
+.search-open .eden-logo .eden-tag,
+.full-navgtion .eden-logo .eden-tag {
+    color: #d4b06a;
+}
+
+#header-2 .logo {
+    padding-top: 8px;
+}
+
+#header-2 .logo a.eden-logo {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.eden-footer-brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.eden-price-badge {
+    display: inline-block;
+    background: #1a3a2a;
+    color: #fff;
+    padding: 14px 28px;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.eden-price-badge strong {
+    color: #d4b06a;
+    font-size: 24px;
+}
+
+.eden-cause {
+    background: #f7f3ea;
+    padding: 40px 30px;
+    margin: 40px 0;
+    text-align: center;
+    border-left: 4px solid #8a6d3b;
+}
+
+.eden-cause h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    margin-bottom: 12px;
+}
+
+.eden-cause p {
+    max-width: 640px;
+    margin: 0 auto;
+    color: #444;
+    line-height: 1.7;
+}
+
+.eden-discount-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.eden-discount-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 15px;
+}
+
+.eden-discount-list li strong {
+    color: #1a3a2a;
+}
+
+.eden-amenity-grid .services-inner {
+    margin-bottom: 30px;
+}
+
+.eden-home-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.eden-home-section.alt {
+    background: #f9f7f2;
+}
+
+.eden-home-section .hedding {
+    margin-bottom: 40px;
+}
+
+.eden-feature-box {
+    text-align: center;
+    padding: 28px 18px 24px;
+    margin-bottom: 20px;
+    background: #f9f7f2;
+    border: 1px solid #ebe4d6;
+    min-height: 190px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.eden-feature-box:hover {
+    background: #fff;
+    border-color: #d4b06a;
+}
+
+.eden-feature-box i {
+    font-size: 36px;
+    color: #8a6d3b;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.eden-feature-box h3 {
+    font-size: 18px;
+    color: #1a3a2a;
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.eden-feature-box p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.eden-home-away {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.eden-home-away .hedding {
+    margin-bottom: 40px;
+}
+
+.eden-home-away .hedding p {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.75;
+}
+
+.eden-home-away-gallery-link {
+    margin: 10px 0 0;
+}
+
+.eden-home-away-gallery-link a {
+    color: #1a3a2a;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #d4b06a;
+    padding-bottom: 2px;
+}
+
+.eden-home-away-gallery-link a:hover {
+    color: #8a6d3b;
+}
+
+.eden-home-away-gallery-link i {
+    margin-left: 4px;
+}
+
+.banner-2 .banner-text .text-box h2 {
+    letter-spacing: 3px;
+}
+
+.banner-2 .banner-text .text-box strong {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.eden-contact-note {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Tourism destinations */
+.eden-tourism-cat {
+    margin: 50px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #1a3a2a;
+}
+
+.eden-tourism-cat h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 26px;
+    margin: 0 0 6px;
+}
+
+.eden-tourism-cat p {
+    color: #8a6d3b;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.eden-place {
+    margin-bottom: 35px;
+}
+
+.eden-place-photo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #d9e2d4 0%, #c5b48a 50%, #8a9a7b 100%);
+    border: 1px dashed #8a6d3b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #1a3a2a;
+    overflow: hidden;
+}
+
+.eden-place-photo i {
+    font-size: 36px;
+    color: #1a3a2a;
+    opacity: 0.55;
+    margin-bottom: 8px;
+}
+
+.eden-place-photo span {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.eden-place-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.eden-place .text-box {
+    padding: 16px 4px 0;
+}
+
+.eden-place .text-box h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.eden-place .text-box p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.eden-tourism-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0 10px;
+}
+
+.eden-tourism-nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #f7f3ea;
+    color: #1a3a2a;
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid #e5ddd0;
+}
+
+.eden-tourism-nav a:hover {
+    background: #1a3a2a;
+    color: #fff;
+    border-color: #1a3a2a;
+}
+
+@media (max-width: 767px) {
+    .eden-logo .eden-name {
+        font-size: 16px;
+    }
+    .eden-logo .eden-tag {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+    .eden-place-photo {
+        height: 160px;
+    }
+}
+
+
+.eden-amenity-card {
+    margin-bottom: 28px;
+    text-align: center;
+}
+.eden-amenity-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
+}
+.eden-amenity-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 17px;
+    margin: 0 0 6px;
+}
+.eden-amenity-card p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Home Away From Home layout */
+.eden-home-away {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.eden-home-away .hedding {
+    margin-bottom: 36px;
+}
+
+.eden-home-away .hedding p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.75;
+}
+
+.eden-home-away-feature {
+    margin-bottom: 28px;
+}
+
+.eden-home-away-hero,
+.eden-home-away-stack figure {
+    position: relative;
+    margin: 0 0 18px;
+    overflow: hidden;
+    background: #e8e4dc;
+}
+
+.eden-home-away-hero img,
+.eden-home-away-stack img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.eden-home-away-hero img {
+    height: 460px;
+}
+
+.eden-home-away-stack {
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    gap: 18px;
+}
+
+.eden-home-away-stack figure {
+    flex: 1;
+    margin: 0;
+    min-height: 0;
+}
+
+.eden-home-away-stack img {
+    height: 100%;
+}
+
+.eden-home-away-hero figcaption,
+.eden-home-away-stack figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px 18px;
+    background: linear-gradient(transparent, rgba(26, 58, 42, 0.75));
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+.eden-home-away-grid {
+    margin-top: 10px;
+}
+
+.eden-home-away-grid .eden-amenity-card {
+    margin-bottom: 20px;
+}
+
+.eden-amenity-photo {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: #e8e4dc;
+}
+
+.eden-amenity-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.eden-home-away-extras {
+    list-style: none;
+    padding: 18px 0 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 28px;
+    border-top: 1px solid #e5ddd0;
+}
+
+.eden-home-away-extras li {
+    color: #1a3a2a;
+    font-size: 14px;
+}
+
+.eden-home-away-extras li i {
+    color: #8a6d3b;
+    margin-right: 8px;
+}
+
+@media (max-width: 991px) {
+    .eden-home-away-hero img {
+        height: 320px;
+    }
+    .eden-home-away-stack {
+        height: auto;
+    }
+    .eden-home-away-stack img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .eden-home-away-hero img {
+        height: 240px;
+    }
+    .eden-amenity-photo {
+        height: 140px;
+    }
+    .eden-home-away-extras {
+        gap: 10px 16px;
+    }
+    .eden-home-away-extras li {
+        font-size: 13px;
+    }
+}
+.eden-place-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.services-inner .image-holder {
+    overflow: hidden;
+    max-height: 220px;
+}
+.services-inner .image-holder img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.ourpackage-inare .image-holder {
+    overflow: hidden;
+}
+.ourpackage-inare .image-holder > img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+.project-iso-inner .image-holder img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.hotel-about-inner .image-holder img,
+.about-parking-colum img,
+.tinos-staff .image-holder img,
+.eden-staff .image-holder img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.eden-logo img {
+    display: block;
+    height: 56px;
+    width: auto;
+    max-width: 260px;
+    object-fit: contain;
+}
+
+#header-2 .eden-logo img,
+.full-header .eden-logo img,
+.reserve-hotel .eden-logo img,
+.search-open .eden-logo img,
+.full-navgtion .eden-logo img {
+    height: 52px;
+    max-width: 240px;
+}
+
+.eden-footer-logo img {
+    display: block;
+    height: 64px;
+    width: auto;
+    max-width: 300px;
+    margin-bottom: 12px;
+    background: #fff;
+    padding: 8px 14px;
+}
+
+.eden-footer-brand { display: none; }
+
+@media (max-width: 767px) {
+    .eden-logo img {
+        height: 40px;
+        max-width: 180px;
+    }
+    #header-2 .eden-logo img {
+        height: 38px;
+        max-width: 170px;
+    }
+}
+#xp-footer {
+    min-height: 220px;
+}
+#xp-footer .overlay {
+    background: rgba(26, 58, 42, 0.55) !important;
+}
+#xp-footer .footer-inner {
+    position: relative;
+    z-index: 2;
+}
+
+/* Homepage villa showcase */
+.eden-villa-showcase {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 14px;
+    margin: 10px 0 36px;
+}
+
+.eden-villa-showcase-main,
+.eden-villa-showcase-grid figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    background: #e8e4dc;
+}
+
+.eden-villa-showcase-main img,
+.eden-villa-showcase-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.eden-villa-showcase-main {
+    min-height: 440px;
+}
+
+.eden-villa-showcase-main img {
+    height: 440px;
+}
+
+.eden-villa-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 14px;
+}
+
+.eden-villa-showcase-grid figure {
+    min-height: 0;
+}
+
+.eden-villa-showcase-grid img {
+    height: 213px;
+}
+
+.eden-villa-showcase-main figcaption,
+.eden-villa-showcase-grid figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px 14px;
+    background: linear-gradient(transparent, rgba(26, 58, 42, 0.78));
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+.eden-feature-box-compact {
+    min-height: 140px;
+    padding: 22px 14px 18px;
+}
+
+.eden-feature-box-compact i {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.eden-feature-box-compact h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.eden-feature-box-compact p {
+    font-size: 12px;
+}
+
+.eden-home-away-amenities {
+    margin-bottom: 8px;
+}
+
+.eden-home-away-gallery-link {
+    margin: 18px 0 0;
+}
+
+.eden-home-away-gallery-link a {
+    color: #1a3a2a;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #d4b06a;
+    padding-bottom: 2px;
+}
+
+.eden-home-away-gallery-link a:hover {
+    color: #8a6d3b;
+}
+
+.eden-link-sep {
+    margin: 0 12px;
+    color: #c5b9a4;
+}
+
+/* About / The Villa page */
+.eden-villa {
+    padding: 50px 0 70px;
+}
+
+.eden-villa .hedding {
+    margin-bottom: 32px;
+}
+
+.eden-villa-hero {
+    position: relative;
+    margin-bottom: 48px;
+    overflow: hidden;
+    background: #e8e4dc;
+}
+
+.eden-villa-hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.eden-villa-hero-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 28px 32px;
+    background: linear-gradient(transparent, rgba(26, 58, 42, 0.82));
+    color: #fff;
+}
+
+.eden-villa-hero-caption strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.eden-villa-hero-caption span {
+    font-size: 14px;
+    opacity: 0.92;
+}
+
+.eden-villa-intro {
+    margin-bottom: 50px;
+    align-items: stretch;
+}
+
+.eden-villa-intro h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 28px;
+    margin: 8px 0 16px;
+}
+
+.eden-villa-intro > div > p {
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 20px;
+}
+
+.eden-villa-facts {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+}
+
+.eden-villa-facts li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ebe4d6;
+    color: #333;
+    font-size: 14px;
+}
+
+.eden-villa-facts li i {
+    width: 22px;
+    color: #8a6d3b;
+    margin-right: 8px;
+}
+
+.eden-villa-cta .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.eden-btn-ghost {
+    background: transparent !important;
+    color: #1a3a2a !important;
+    border: 1px solid #1a3a2a !important;
+}
+
+.eden-btn-ghost:hover {
+    background: #1a3a2a !important;
+    color: #fff !important;
+}
+
+.eden-villa-mosaic {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 12px;
+    min-height: 380px;
+}
+
+.eden-villa-mosaic-main {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.eden-villa-mosaic-side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.eden-villa-mosaic-side img {
+    width: 100%;
+    flex: 1;
+    min-height: 184px;
+    object-fit: cover;
+    display: block;
+}
+
+.eden-villa-rooms-head {
+    margin: 10px 0 28px;
+}
+
+.eden-villa-rooms-head h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.eden-villa-rooms-head p {
+    color: #666;
+}
+
+.eden-villa-room {
+    margin-bottom: 28px;
+    background: #f9f7f2;
+}
+
+.eden-villa-room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.eden-villa-room > div {
+    padding: 18px 18px 20px;
+}
+
+.eden-villa-room h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.eden-villa-room p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.eden-villa-included {
+    margin: 20px 0 50px;
+    padding: 36px 40px;
+    background: #1a3a2a;
+    color: #fff;
+}
+
+.eden-villa-included h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    margin: 0 0 16px;
+    color: #d4b06a;
+}
+
+.eden-villa-included ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 32px;
+}
+
+.eden-villa-included li {
+    padding: 8px 0 8px 18px;
+    position: relative;
+    break-inside: avoid;
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.eden-villa-included li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 7px;
+    height: 7px;
+    background: #d4b06a;
+}
+
+.eden-villa-hosts {
+    margin-top: 10px;
+}
+
+.eden-villa-hosts h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.eden-villa-hosts > p {
+    color: #666;
+    margin-bottom: 28px;
+}
+
+.eden-host-card {
+    padding: 28px 18px;
+    margin-bottom: 20px;
+    background: #f9f7f2;
+    border: 1px solid #ebe4d6;
+}
+
+.eden-host-card i {
+    font-size: 28px;
+    color: #8a6d3b;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.eden-host-card h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.eden-host-card a {
+    color: #8a6d3b;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.eden-host-card a:hover {
+    color: #1a3a2a;
+}
+
+@media (max-width: 991px) {
+    .eden-villa-showcase {
+        grid-template-columns: 1fr;
+    }
+    .eden-villa-showcase-main img {
+        height: 300px;
+    }
+    .eden-villa-showcase-main {
+        min-height: 300px;
+    }
+    .eden-villa-hero img {
+        height: 300px;
+    }
+    .eden-villa-mosaic {
+        margin-top: 28px;
+        min-height: 320px;
+    }
+    .eden-villa-mosaic-main {
+        min-height: 320px;
+    }
+    .eden-villa-included ul {
+        columns: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .eden-villa-showcase-grid img {
+        height: 140px;
+    }
+    .eden-villa-showcase-main img {
+        height: 220px;
+    }
+    .eden-villa-showcase-main {
+        min-height: 220px;
+    }
+    .eden-villa-hero img {
+        height: 220px;
+    }
+    .eden-villa-hero-caption {
+        padding: 18px 16px;
+    }
+    .eden-villa-hero-caption strong {
+        font-size: 20px;
+    }
+    .eden-villa-mosaic {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+    .eden-villa-mosaic-main {
+        min-height: 220px;
+        height: 220px;
+    }
+    .eden-villa-mosaic-side {
+        flex-direction: row;
+    }
+    .eden-villa-mosaic-side img {
+        min-height: 120px;
+        height: 120px;
+    }
+    .eden-villa-included {
+        padding: 28px 20px;
+    }
+    .eden-link-sep {
+        display: block;
+        margin: 8px 0;
+        visibility: hidden;
+        height: 0;
+    }
+    .eden-home-away-gallery-link a {
+        display: inline-block;
+        margin: 6px 8px;
+    }
+}
