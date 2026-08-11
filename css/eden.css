@@ -341,6 +341,14 @@ iframe {
     .eden-place-photo {
         height: 160px;
     }
+    .eden-logo img {
+        height: 52px;
+        max-width: 210px;
+    }
+    #header-2 .eden-logo img {
+        height: 52px;
+        max-width: 210px;
+    }
 }
 
 
@@ -575,12 +583,12 @@ iframe {
 
 @media (max-width: 767px) {
     .eden-logo img {
-        height: 40px;
-        max-width: 180px;
+        height: 52px;
+        max-width: 210px;
     }
     #header-2 .eden-logo img {
-        height: 38px;
-        max-width: 170px;
+        height: 52px;
+        max-width: 210px;
     }
 }
 #xp-footer {
@@ -1015,70 +1023,173 @@ iframe {
         max-width: 100%;
     }
 
-    /* Header / logo */
+    /* Header / logo — compact bar, larger logo */
     #header-2 {
-        padding: 10px 12px 0 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 8px 14px !important;
+        min-height: 64px;
+        height: auto;
+        background: #fff !important;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    #header-2 > .mobail-logo,
+    #header-2 > .mobail-nav {
+        float: none !important;
+        width: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    #header-2 > .mobail-logo {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    #header-2 > .mobail-nav {
+        flex: 0 0 auto;
+    }
+
+    #header-2 .row {
+        margin: 0 !important;
     }
 
     #header-2 .logo {
-        padding-top: 4px;
+        padding: 0 !important;
+        margin: 0 !important;
+        line-height: 0;
     }
 
-    #header-2 .eden-logo img,
-    .eden-logo img {
-        height: 36px;
-        max-width: 150px;
+    #header-2 .logo a.eden-logo {
+        margin-left: 0 !important;
+        display: inline-block;
+        line-height: 0;
     }
 
-    #header-2 .booking .btn {
-        padding: 10px 12px !important;
-        font-size: 11px;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
+    #header-2 .eden-logo img {
+        height: 52px !important;
+        max-width: 210px !important;
+        width: auto !important;
+        object-fit: contain;
+    }
+
+    #header-2 .navigation {
+        margin: 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        top: auto !important;
+        float: none !important;
+    }
+
+    #header-2 .inner-navigation {
+        margin: 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        width: auto !important;
+        top: auto !important;
+    }
+
+    #header-2 .navbar,
+    #header-2 .navbar-header {
+        margin: 0 !important;
+        border: none !important;
+        min-height: 0 !important;
+        background: transparent !important;
+    }
+
+    #header-2 .navigation-search,
+    #header-2 .booking {
+        display: none !important;
     }
 
     #header-2 .navbar-toggle {
-        margin: 4px 8px 0 0;
-        padding: 8px 10px;
-        border: 1px solid rgba(255, 255, 255, 0.45);
+        display: block !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 9px 10px;
+        border: 1px solid #1a3a2a !important;
+        border-radius: 2px;
+        background: transparent !important;
+    }
+
+    #header-2 .navbar-default .navbar-toggle:hover,
+    #header-2 .navbar-default .navbar-toggle:focus {
+        background: #f7f3ea !important;
     }
 
     #header-2 .navbar-default .navbar-toggle .icon-bar {
-        background: #fff;
+        background: #1a3a2a !important;
+        width: 20px;
     }
 
     #header-2 .navbar-default .navbar-collapse {
+        position: absolute !important;
         left: 0 !important;
-        right: 0;
+        right: 0 !important;
+        top: 100% !important;
         width: 100% !important;
-        top: 52px !important;
-        background: #fff;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-        border: none;
-        max-height: 70vh;
+        margin: 0 !important;
+        padding: 8px 16px 16px !important;
+        background: #fff !important;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        border: none !important;
+        max-height: 75vh;
         overflow-y: auto;
-        z-index: 100;
+        z-index: 200;
+    }
+
+    #header-2 .navbar-nav {
+        margin: 0 !important;
+        float: none !important;
+    }
+
+    #header-2 .navbar-nav > li {
+        float: none !important;
+        margin: 0 !important;
     }
 
     #header-2 .navbar-nav > li > a {
-        padding: 14px 8px !important;
-        font-size: 14px;
+        padding: 12px 4px !important;
+        font-size: 15px !important;
         color: #1a3a2a !important;
         border-bottom: 1px solid #f0ebe3;
     }
 
+    #header-2 .navbar-nav > li:last-child > a {
+        border-bottom: none;
+    }
+
+    /* Inner pages header */
     #header-inner {
-        padding: 14px 12px 10px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 14px !important;
+        min-height: 64px;
+    }
+
+    #header-inner .logo,
+    #header-inner [class*="col-"] {
+        float: none !important;
+        width: auto !important;
+        padding: 0 !important;
     }
 
     #header-inner .eden-logo img {
-        height: 34px;
-        max-width: 140px;
+        height: 48px !important;
+        max-width: 200px !important;
+        width: auto !important;
     }
 
     #header-inner .navigation-inner {
-        top: -8px !important;
-        right: 8px !important;
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 0 !important;
+        text-align: right;
     }
 
     #clapess a,
@@ -1086,9 +1197,9 @@ iframe {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 22px;
+        min-width: 42px;
+        min-height: 42px;
+        font-size: 20px;
     }
 
     /* Hero banner */
@@ -1116,21 +1227,14 @@ iframe {
     .banner-2 .banner-text .text-box h1 {
         font-size: 26px !important;
         line-height: 1.2;
-        padding-bottom: 10px !important;
+        padding-bottom: 0 !important;
         letter-spacing: 0.5px;
+        margin-bottom: 0;
     }
 
-    .banner-2 .banner-text .text-box p {
-        font-size: 12px;
-        line-height: 1.5;
-        letter-spacing: 0.5px;
-        padding: 0 8px;
-    }
-
+    .banner-2 .banner-text .text-box p,
     .banner-2 .banner-text .text-box strong {
-        font-size: 13px;
-        margin-top: 10px;
-        letter-spacing: 0.3px;
+        display: none !important;
     }
 
     .bainner-home .owl-theme .owl-controls {
@@ -1658,15 +1762,10 @@ iframe {
         font-size: 13px;
     }
 
-    .banner-2 .banner-text .text-box p,
-    .banner-2 .banner-text .text-box strong {
-        font-size: 11px;
-    }
-
     .eden-logo img,
     #header-2 .eden-logo img {
-        height: 30px;
-        max-width: 120px;
+        height: 46px !important;
+        max-width: 180px !important;
     }
 
     .eden-villa-showcase-grid {
