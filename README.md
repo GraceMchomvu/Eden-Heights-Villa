@@ -1,6 +1,6 @@
 # Eden Heights Villa
 
-Website for **Eden Heights Villa** — a private Airbnb home in Kiserian, Mijogoroni, Arusha, Tanzania.
+Website for **Eden Heights Villa** — a private Airbnb home in Kiserian, Mijohoroni, Arusha, Tanzania.
 
 Live site (after Cloudflare setup): connect this repo to Cloudflare Pages.
 
