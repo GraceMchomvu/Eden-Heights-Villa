@@ -1,12 +1,8 @@
-﻿/*
+﻿# Applied to every path on Cloudflare Pages
+/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
-
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
-
-/
   Cache-Control: public, max-age=0, must-revalidate
 
 /css/*
