@@ -1571,6 +1571,7 @@ tr:nth-child(odd) {background: #efefef}
         Full-Navgtion start
 *************************************/
 .full-navgtion{
+    display: none !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -1684,6 +1685,7 @@ tr:nth-child(odd) {background: #efefef}
         Search Open start
 *************************************/
 .search-open{
+    display: none !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -1945,6 +1947,7 @@ tr:nth-child(odd) {background: #efefef}
 }
 /*---pri loder-----*/
 .spinner-wrapper {
+    display: none !important;
     position: fixed;
     top: 0;
     left: 0;

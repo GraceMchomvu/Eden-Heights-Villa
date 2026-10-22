@@ -1927,8 +1927,8 @@ iframe {
     margin: 0 !important;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2px;
+    flex-wrap: nowrap;
+    gap: 0;
 }
 
 #header-2.eden-header .navbar-nav > li {
@@ -1937,12 +1937,13 @@ iframe {
 }
 
 #header-2.eden-header .navbar-nav > li > a {
-    padding: 8px 14px !important;
+    padding: 8px 11px !important;
     color: #1a3a2a !important;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.2px;
     background: transparent !important;
+    white-space: nowrap;
 }
 
 #header-2.eden-header .navbar-nav > li > a:hover {
@@ -1962,22 +1963,27 @@ iframe {
     color: #fff !important;
 }
 
-/* Mobile: slim frosted bar over hero */
+/* Mobile: sticky bar so inner pages stay readable */
 @media (max-width: 991px) {
-    #xp-wrapper {
+    #xp-wrapper,
+    .main-wrapper {
         position: relative;
+        overflow: visible !important;
     }
 
     #header-2.eden-header {
-        position: absolute !important;
+        position: sticky !important;
         top: 0;
         left: 0;
         right: 0;
-        background: transparent !important;
-        z-index: 60;
+        background: #fff !important;
+        z-index: 200;
+        overflow: visible !important;
+        height: auto !important;
     }
 
     #header-2.eden-header .eden-header-bar {
+        position: relative;
         min-height: 64px;
         height: 64px;
         padding: 10px 14px;
@@ -1987,6 +1993,7 @@ iframe {
         border-bottom: 1px solid rgba(26, 58, 42, 0.08);
         max-width: none;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        overflow: visible;
     }
 
     #header-2.eden-header .eden-logo img {
@@ -1996,6 +2003,15 @@ iframe {
 
     #header-2.eden-header .eden-menu-btn {
         display: inline-flex !important;
+    }
+
+    #header-2.eden-header .eden-header-bar {
+        position: relative;
+        overflow: visible;
+    }
+
+    #header-2.eden-header .eden-nav {
+        position: static;
     }
 
     #header-2.eden-header .eden-nav-panel.navbar-collapse.collapse {
@@ -2009,25 +2025,32 @@ iframe {
     #header-2.eden-header .eden-nav-panel {
         position: absolute !important;
         top: calc(100% + 8px) !important;
-        right: 0 !important;
-        left: auto !important;
-        width: min(280px, calc(100vw - 28px)) !important;
+        right: 12px !important;
+        left: 12px !important;
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        max-height: min(70vh, 480px);
+        overflow-x: hidden;
+        overflow-y: auto;
         margin: 0 !important;
-        padding: 10px !important;
+        padding: 8px 10px 12px !important;
         background: #fff !important;
         border: 1px solid rgba(26, 58, 42, 0.08) !important;
         border-radius: 12px;
         box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16) !important;
-        z-index: 70;
+        z-index: 250;
     }
 
     #header-2.eden-header .navbar-nav {
         display: block;
         width: 100%;
+        flex-wrap: nowrap;
     }
 
     #header-2.eden-header .navbar-nav > li {
         display: block;
+        float: none !important;
         width: 100%;
         border-bottom: 1px solid #f1ece4;
     }
@@ -2039,21 +2062,40 @@ iframe {
     #header-2.eden-header .navbar-nav > li > a {
         display: block;
         padding: 13px 12px !important;
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 1.35;
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    #header-2.eden-header.eden-header-static {
+        position: relative !important;
+        background: #fff !important;
+    }
+
+    #header-2.eden-header.eden-header-static .eden-header-bar {
+        background: #fff;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-bottom: 1px solid rgba(26, 58, 42, 0.08);
     }
 
     #header-2.eden-header .eden-nav-cta > a {
         margin: 8px 0 0;
         text-align: center;
         border-radius: 8px;
+        background: #1a3a2a !important;
+        color: #fff !important;
     }
 
-    /* Hero fills from top under overlay header */
+    /* Hero stays on-screen; title sits above the dots */
     .banner-2 .bainner-home .item,
     .bainner-home .item {
-        height: 100svh;
-        min-height: 520px;
-        max-height: none;
+        height: 62vh;
+        min-height: 380px;
+        max-height: 520px;
     }
 
     .banner-2 .banner-text .text-box {
@@ -2076,5 +2118,379 @@ iframe {
     #header-2.eden-header .eden-menu-btn {
         width: 40px;
         height: 40px;
+    }
+}
+
+/* Full-page overlay menu: one column, no split/wrapping labels */
+.full-navgtion .full-header {
+    padding: 16px 20px 0;
+    float: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.full-navgtion .all-navigation {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transform: none;
+    overflow-y: auto;
+    padding: 8px 20px 32px;
+    box-sizing: border-box;
+}
+
+.full-navgtion .all-navigation .row > [class*="col-"] {
+    float: none !important;
+    width: 100% !important;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.full-navgtion-left {
+    padding-left: 0 !important;
+}
+
+.full-navgtion-left ul li {
+    margin-bottom: 0 !important;
+    display: block;
+    width: 100%;
+}
+
+.full-navgtion-left ul li i {
+    display: none;
+}
+
+.full-navgtion-left ul li a {
+    display: block;
+    width: 100%;
+    padding: 14px 4px;
+    font-size: 18px;
+    line-height: 1.3;
+    white-space: normal;
+    overflow-wrap: break-word;
+    border-bottom: 1px solid #eee;
+}
+
+.full-navgtion .socail-infor {
+    float: none;
+    width: 100%;
+    max-width: 480px;
+    margin: 24px auto 0;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+/* Site must be visible even if JavaScript fails to load */
+.spinner-wrapper,
+.search-open,
+.full-navgtion,
+.reserve-hotel {
+    display: none !important;
+}
+
+.full-navgtion.is-open {
+    display: block !important;
+}
+
+.owl-carousel:not(.owl-loaded) {
+    display: block;
+}
+
+.owl-carousel:not(.owl-loaded) .item + .item {
+    display: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    overflow: hidden;
+}
+
+.bainner-home .item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner-text {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+}
+
+/* ========== Mobile type: no overlapping or clipped words ========== */
+@media (max-width: 991px) {
+    html,
+    body {
+        overflow-x: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p, span, a, li, strong, figcaption, label {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: normal;
+        max-width: 100%;
+    }
+
+    .inner-hadding h2,
+    .hedding h2 {
+        letter-spacing: 0.08em !important;
+        line-height: 1.3 !important;
+        padding: 0 8px 8px !important;
+        font-size: 22px !important;
+    }
+
+    .inner-hadding span {
+        display: block;
+        letter-spacing: 0.08em;
+        line-height: 1.45;
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .hedding p {
+        display: block !important;
+        letter-spacing: 0 !important;
+        line-height: 1.65 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 8px !important;
+        font-size: 15px !important;
+        box-sizing: border-box;
+    }
+
+    .banner-2 .chid-pernt .child {
+        vertical-align: bottom;
+    }
+
+    .banner-2 .banner-text {
+        padding: 0 16px 52px !important;
+        box-sizing: border-box;
+    }
+
+    .banner-2 .banner-text .container-fluid,
+    .banner-2 .banner-text .row,
+    .banner-2 .banner-text [class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        float: none !important;
+    }
+
+    .banner-2 .banner-text .text-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 12px;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+
+    .banner-2 .banner-text .text-box h2 {
+        display: block;
+        width: 100%;
+        font-size: 13px !important;
+        letter-spacing: 0.12em;
+        line-height: 1.4;
+        padding-bottom: 8px;
+        white-space: normal !important;
+    }
+
+    .banner-2 .banner-text .text-box h1 {
+        display: block;
+        width: 100%;
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        letter-spacing: 0 !important;
+        padding-bottom: 10px !important;
+        white-space: normal !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+    }
+
+    .banner-2 .banner-text .text-box h2 {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+    }
+
+    .banner-2 .banner-text .text-box p,
+    .banner-2 .banner-text .text-box strong {
+        display: none !important;
+    }
+
+    .banner-2 .bainner-home .item,
+    .bainner-home .item {
+        position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        height: 62vh !important;
+        min-height: 380px !important;
+        max-height: 520px !important;
+    }
+
+    .banner-2 .banner-text {
+        left: 0 !important;
+        right: 0 !important;
+        width: auto !important;
+        max-width: 100% !important;
+    }
+
+    #banner,
+    .bainner-home,
+    #owl-demo,
+    #owl-demo .owl-wrapper-outer,
+    .bainner-home .owl-carousel {
+        overflow: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    #owl-demo .owl-item {
+        float: left;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow: hidden !important;
+    }
+
+    .bainner-home .owl-theme .owl-controls {
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        bottom: 12px !important;
+        border: none !important;
+        text-align: center !important;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .bainner-home .owl-pagination {
+        display: inline-block !important;
+        float: none !important;
+        width: auto !important;
+    }
+
+    .bainner-home .owl-buttons {
+        display: none !important;
+    }
+
+    .bainner-home .owl-theme .owl-controls .owl-page span {
+        width: 8px !important;
+        height: 8px !important;
+        margin: 0 5px !important;
+        padding: 0 !important;
+        background: rgba(255, 255, 255, 0.45) !important;
+        border-radius: 50% !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        color: transparent !important;
+        overflow: hidden;
+    }
+
+    .bainner-home .owl-theme .owl-controls .owl-page.active span {
+        background: #fff !important;
+    }
+
+    .bainner-home .owl-theme .owl-controls .owl-page strong,
+    .bainner-home .owl-theme .owl-controls .owl-page strong:after {
+        display: none !important;
+    }
+
+    .eden-tourism-nav {
+        flex-wrap: wrap !important;
+        overflow: visible !important;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .eden-tourism-nav a {
+        white-space: normal !important;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .ourpackage-inare .text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 12px !important;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .ourpackage-inare .text-box h3,
+    .ourpackage-inare .text-box h3 a,
+    .ourpackage-inare .text-box h4 {
+        font-size: 16px !important;
+        line-height: 1.3 !important;
+        letter-spacing: 0.04em;
+        white-space: normal !important;
+        padding: 0 4px 6px;
+    }
+
+    .ourpackage-inare .text-box p {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+        letter-spacing: 0.02em;
+        white-space: normal !important;
+        padding: 0 6px;
+    }
+
+    .eden-villa-showcase-main figcaption,
+    .eden-villa-showcase-grid figcaption,
+    .eden-villa-hero-caption strong,
+    .eden-villa-hero-caption span {
+        white-space: normal;
+        line-height: 1.35;
+    }
+
+    .eden-feature-box h3,
+    .eden-feature-box p {
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    #header-2.eden-header .eden-header-bar {
+        gap: 10px;
+    }
+
+    #header-2.eden-header .eden-logo {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    #header-2.eden-header .eden-logo img {
+        max-width: min(200px, calc(100vw - 88px)) !important;
+        height: 36px !important;
+    }
+
+    select {
+        font-size: 16px !important;
+        max-width: 100%;
+    }
+
+    .btn {
+        letter-spacing: 0.08em;
+        white-space: normal;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 479px) {
+    .inner-hadding h2,
+    .hedding h2 {
+        font-size: 20px !important;
+        letter-spacing: 0.06em !important;
+    }
+
+    .banner-2 .banner-text .text-box h1 {
+        font-size: 22px !important;
     }
 }

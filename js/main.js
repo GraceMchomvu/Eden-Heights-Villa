@@ -1,36 +1,108 @@
+(function () {
+    function hideBlockingOverlays() {
+        var classes = ["spinner-wrapper", "search-open", "full-navgtion", "reserve-hotel"];
+        for (var c = 0; c < classes.length; c++) {
+            var nodes = document.getElementsByClassName(classes[c]);
+            for (var i = 0; i < nodes.length; i++) {
+                nodes[i].style.display = "none";
+            }
+        }
+    }
+
+    hideBlockingOverlays();
+    document.addEventListener("DOMContentLoaded", hideBlockingOverlays);
+    window.addEventListener("load", hideBlockingOverlays);
+
+    document.addEventListener("click", function (e) {
+        var target = e.target;
+        while (target && target !== document && !(target.classList && target.classList.contains("eden-menu-btn"))) {
+            target = target.parentNode;
+        }
+        if (!target || target === document) {
+            return;
+        }
+        e.preventDefault();
+        var panel = document.getElementById("edenMainNav");
+        if (!panel) {
+            return;
+        }
+        var open = !panel.classList.contains("in");
+        if (open) {
+            panel.classList.add("in");
+        } else {
+            panel.classList.remove("in");
+        }
+        target.classList.toggle("collapsed", !open);
+        target.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    document.addEventListener("click", function (e) {
+        var panel = document.getElementById("edenMainNav");
+        var btn = document.querySelector(".eden-menu-btn");
+        if (!panel || !panel.classList.contains("in")) {
+            return;
+        }
+        var node = e.target;
+        while (node && node !== document) {
+            if (node === panel || (node.classList && node.classList.contains("eden-menu-btn"))) {
+                if (node.tagName === "A" && panel.contains(node)) {
+                    panel.classList.remove("in");
+                    if (btn) {
+                        btn.classList.add("collapsed");
+                        btn.setAttribute("aria-expanded", "false");
+                    }
+                }
+                return;
+            }
+            node = node.parentNode;
+        }
+        panel.classList.remove("in");
+        if (btn) {
+            btn.classList.add("collapsed");
+            btn.setAttribute("aria-expanded", "false");
+        }
+    });
+})();
+
+if (typeof jQuery !== "undefined") {
 $(document).ready(function () {
     "use strict";
+    jQuery(".spinner-wrapper, .search-open, .full-navgtion, .reserve-hotel").hide();
 //+++++++++++++++++++++++++++++++++++++++++++
 //     bainner slider Jquery Code Start
 //+++++++++++++++++++++++++++++++++++++++++++   
-    function customPager() {
-        $.each(this.owl.userItems, function (i) {
-            var titleData = jQuery(this).find('strong');
-            var paginationLinks = jQuery('.owl-controls .owl-pagination .owl-page span');
-            $(paginationLinks[i]).append(titleData);
+    if ($("#owl-demo").length && $.fn.owlCarousel) {
+        $("#owl-demo").owlCarousel({
+            autoPlay: true,
+            navigation: true,
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            items: 1,
+            navigationText: ['<i class="fa fa-long-arrow-left"></i>', '<i class="fa fa-long-arrow-right"></i>'],
+            pagination: true
         });
+        function sizeHeroSlides() {
+            var slideWidth = $("#owl-demo").width() || $(window).width();
+            $("#owl-demo .owl-item").css({
+                width: slideWidth,
+                overflow: "hidden"
+            });
+        }
+        sizeHeroSlides();
+        $(window).on("resize", sizeHeroSlides);
     }
-    $("#owl-demo").owlCarousel({
-        autoPlay: true,
-        navigation: true,
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true,
-        items: 1,
-        navigationText: ['<i class="fa fa-long-arrow-left"></i>', '<i class="fa fa-long-arrow-right"></i>'],
-        pagination: true,
-        afterInit: customPager,
-        afterUpdate: customPager
-    });
 //+++++++++++++++++++++++++++++++++++++++++++
 //    on click hide and show Jquery Code Start
 //+++++++++++++++++++++++++++++++++++++++++++
-    $('.full-navgtion').hide();
-    $('#clapess a').on('click', function () {
-        $('.full-navgtion').slideToggle('slow');
+    $('.full-navgtion').hide().removeClass('is-open');
+    $('#clapess a').on('click', function (e) {
+        e.preventDefault();
+        $('.full-navgtion').addClass('is-open').show();
     });
-    $('#clapess2 a').on('click', function () {
-        $('.full-navgtion').slideToggle('slow');
+    $('#clapess2 a').on('click', function (e) {
+        e.preventDefault();
+        $('.full-navgtion').removeClass('is-open').hide();
     });
     $('.search-open').hide();
     $('#btn-closs').on('click', function () {
@@ -50,7 +122,7 @@ $(document).ready(function () {
 //    Pri-loding Jquery Code Start
 //+++++++++++++++++++++++++++++++++++++++++++
     jQuery(window).on('load',function () {
-        jQuery(".spinner-wrapper").delay(1500).fadeOut("slow");
+        jQuery(".spinner-wrapper").hide();
 
         
         // external js: isotope.pkgd.js
@@ -107,3 +179,4 @@ $(document).ready(function () {
 
     });
 });
+}
