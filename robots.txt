@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /404.html
+Disallow: /booking-details.html
+
+Sitemap: https://www.edenheightsvilla.com/sitemap.xml

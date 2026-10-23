@@ -2494,3 +2494,45 @@ iframe {
         font-size: 22px !important;
     }
 }
+
+/* ========== Homepage embroidery between sections ========== */
+body.eden-home #header-2.eden-header,
+body.eden-home .eden-home-section,
+body.eden-home #footer {
+    position: relative;
+}
+
+body.eden-home #header-2.eden-header::after,
+body.eden-home .eden-home-section::before,
+body.eden-home #footer::before {
+    content: "";
+    display: block;
+    height: 28px;
+    width: 100%;
+    background-color: #f4efe6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28' viewBox='0 0 96 28' fill='none'%3E%3Cpath d='M2 6h4M10 6h4M18 6h4M26 6h4M34 6h4M42 6h4M50 6h4M58 6h4M66 6h4M74 6h4M82 6h4M90 6h4' stroke='%231a3a2a' stroke-width='1.35' stroke-linecap='round'/%3E%3Cpath d='M2 22h4M10 22h4M18 22h4M26 22h4M34 22h4M42 22h4M50 22h4M58 22h4M66 22h4M74 22h4M82 22h4M90 22h4' stroke='%231a3a2a' stroke-width='1.35' stroke-linecap='round'/%3E%3Cpath d='M16 14l6-5 6 5-6 5z' fill='%23d4b06a' stroke='%238a6d3b' stroke-width='0.8'/%3E%3Cpath d='M48 14l6-5 6 5-6 5z' fill='%231a3a2a'/%3E%3Cpath d='M80 14l6-5 6 5-6 5z' fill='%23d4b06a' stroke='%238a6d3b' stroke-width='0.8'/%3E%3Cpath d='M36 11l6 6M42 11l-6 6' stroke='%238a6d3b' stroke-width='1.25' stroke-linecap='round'/%3E%3Cpath d='M68 11l6 6M74 11l-6 6' stroke='%238a6d3b' stroke-width='1.25' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 96px 28px;
+}
+
+body.eden-home #header-2.eden-header::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14px;
+    z-index: 4;
+    pointer-events: none;
+}
+
+body.eden-home .eden-home-section {
+    padding-top: 0 !important;
+}
+
+body.eden-home .eden-home-section::before {
+    margin: 0 0 28px;
+}
+
+body.eden-home #footer::before {
+    margin: 0 0 12px;
+}
