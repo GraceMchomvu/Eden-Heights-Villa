@@ -33,7 +33,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/color.css">
-        <link rel="stylesheet" href="css/eden.css?v=20261022q">
+        <link rel="stylesheet" href="css/eden.css?v=20261023v">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
@@ -51,6 +51,20 @@
                     <a href="index.html" class="eden-logo" aria-label="Eden Heights Villa home">
                         <img src="images/eden/logo-horizontal-clear.png" alt="Eden Heights Villa" width="600" height="137" />
                     </a>
+                        <div class="eden-header-end">
+                            <div class="eden-search">
+                                <button type="button" class="eden-search-toggle" aria-expanded="false" aria-controls="edenSearchPanel" aria-label="Open search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                                <form class="eden-search-form" id="edenSearchPanel" role="search" action="search.html" method="get">
+                                    <label class="eden-search-label" for="edenSiteSearch">Search the site</label>
+                                    <input id="edenSiteSearch" class="eden-search-input" type="search" name="q" placeholder="Search villa, tourism, booking..." autocomplete="off" />
+                                    <button class="eden-search-submit" type="submit" aria-label="Search">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="eden-search-results" id="edenSearchResults" hidden></div>
+                                </form>
+                            </div>
                     <nav class="eden-nav" aria-label="Main">
                         <button type="button" class="eden-menu-btn collapsed" aria-expanded="false" aria-controls="edenMainNav" aria-label="Open menu">
                             <span></span><span></span><span></span>
@@ -68,6 +82,7 @@
                             </ul>
                         </div>
                     </nav>
+                        </div>
                 </div>
             </header>
                 <main class="main-containt">
@@ -290,6 +305,6 @@
         <script src="js/vendor/masonry-horizontal.js"></script>
         <script src="js/vendor/classie.js"></script>
         
-        <script src="js/main.js?v=20261022q"></script>
+        <script src="js/main.js?v=20261023s"></script>
     </body>
 </html>

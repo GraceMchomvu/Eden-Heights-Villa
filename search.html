@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Search | Eden Heights Villa</title>
+        <meta name="description" content="Search Eden Heights Villa pages for the villa, tourism, packages, transport, and booking.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+        <meta name="robots" content="noindex, follow">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/color.css">
+        <link rel="stylesheet" href="css/eden.css?v=20261023v">
+    </head>
+    <body>
+        <div id="xp-wrapper">
+            <div class="main-wrapper">
+                <header id="header-2" class="eden-header eden-header-static">
+                    <div class="eden-header-bar">
+                        <a href="index.html" class="eden-logo" aria-label="Eden Heights Villa home">
+                            <img src="images/eden/logo-horizontal-clear.png" alt="Eden Heights Villa" width="600" height="137" />
+                        </a>
+                        <div class="eden-header-end">
+                            <div class="eden-search">
+                                <button type="button" class="eden-search-toggle" aria-expanded="false" aria-controls="edenSearchPanel" aria-label="Open search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                                <form class="eden-search-form" id="edenSearchPanel" role="search" action="search.html" method="get">
+                                    <label class="eden-search-label" for="edenSiteSearch">Search the site</label>
+                                    <input id="edenSiteSearch" class="eden-search-input" type="search" name="q" placeholder="Search villa, tourism, booking..." autocomplete="off" />
+                                    <button class="eden-search-submit" type="submit" aria-label="Search">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="eden-search-results" id="edenSearchResults" hidden></div>
+                                </form>
+                            </div>
+                            <nav class="eden-nav" aria-label="Main">
+                                <button type="button" class="eden-menu-btn collapsed" aria-expanded="false" aria-controls="edenMainNav" aria-label="Open menu">
+                                    <span></span><span></span><span></span>
+                                </button>
+                                <div id="edenMainNav" class="navbar-collapse collapse eden-nav-panel">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about-us.html">Villa</a></li>
+                                        <li><a href="tourism.html">Tourism</a></li>
+                                        <li><a href="our-services.html">Services</a></li>
+                                        <li><a href="our-packages.html">Packages</a></li>
+                                        <li><a href="photo-section.html">Gallery</a></li>
+                                        <li><a href="contact-us.html">Contact</a></li>
+                                        <li class="eden-nav-cta"><a href="booking-room-selector.html">Book Stay</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <main class="main-containt">
+                    <div class="container">
+                        <section class="eden-search-page">
+                            <h1 id="edenSearchPageQuery">Search Eden Heights Villa</h1>
+                            <div id="edenSearchPageResults"></div>
+                        </section>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js?v=20261023s"></script>
+    </body>
+</html>

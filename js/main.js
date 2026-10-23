@@ -36,6 +36,178 @@
         target.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
+    var pages = [
+        { title: "Home", url: "index.html", blurb: "Private Airbnb home in Kiserian, Mjohoroni, Arusha.", keys: "home villa airbnb arusha kiserian mjohoroni stay welcome" },
+        { title: "The Villa", url: "about-us.html", blurb: "Sitting room, bedroom, kitchen, hot shower, Wi-Fi, and breakfast.", keys: "villa house rooms kitchen bedroom sitting wifi breakfast fence" },
+        { title: "Tourism", url: "tourism.html", blurb: "Northern Circuit parks, wildlife, mountains, lakes, and culture.", keys: "tourism safari serengeti ngorongoro kilimanjaro manyara tarangire parks trips" },
+        { title: "Services", url: "our-services.html", blurb: "Amenities, extras, groceries, and food delivery.", keys: "services wifi kitchen groceries food delivery breakfast amenities" },
+        { title: "Packages", url: "our-packages.html", blurb: "Daily, weekly, monthly, honeymoon, and bridal stays.", keys: "packages daily weekly monthly discount honeymoon bridal sleepover price 120000" },
+        { title: "Gallery", url: "photo-section.html", blurb: "Photos of the villa, rooms, and grounds.", keys: "gallery photos pictures images rooms" },
+        { title: "Contact", url: "contact-us.html", blurb: "Phone, email, WhatsApp, and directions.", keys: "contact phone email whatsapp elisheba goodluck echelesi 074506244 location" },
+        { title: "Book Stay", url: "booking-room-selector.html", blurb: "Start a booking for your private stay.", keys: "book booking stay reserve room dates" },
+        { title: "Booking details", url: "booking-details.html", blurb: "Complete your villa booking details.", keys: "booking checkout details form" },
+        { title: "Transport", url: "transport.html", blurb: "Airport transfers and local transport.", keys: "transport airport transfer driver car vehicle" }
+    ];
+
+    function normalize(value) {
+        return (value || "").toLowerCase().replace(/\s+/g, " ").trim();
+    }
+
+    function searchPages(query) {
+        var q = normalize(query);
+        if (!q) {
+            return [];
+        }
+        var words = q.split(" ");
+        return pages.filter(function (page) {
+            var hay = normalize(page.title + " " + page.blurb + " " + page.keys);
+            for (var i = 0; i < words.length; i++) {
+                if (hay.indexOf(words[i]) === -1) {
+                    return false;
+                }
+            }
+            return true;
+        });
+    }
+
+    function resultItem(page) {
+        return '<a href="' + page.url + '"><strong>' + page.title + '</strong><span>' + page.blurb + "</span></a>";
+    }
+
+    function bindSearch(root) {
+        var form = root.querySelector(".eden-search-form");
+        var input = root.querySelector(".eden-search-input");
+        var results = root.querySelector(".eden-search-results");
+        var toggle = root.querySelector(".eden-search-toggle");
+        if (!form || !input || !results) {
+            return;
+        }
+
+        function hideResults() {
+            results.hidden = true;
+            results.innerHTML = "";
+        }
+
+        function showResults(query) {
+            var hits = searchPages(query);
+            if (!query) {
+                hideResults();
+                return;
+            }
+            if (!hits.length) {
+                results.innerHTML = '<div class="eden-search-empty">No matching pages. Try villa, tourism, booking, or contact.</div>';
+            } else {
+                results.innerHTML = hits.map(resultItem).join("");
+            }
+            results.hidden = false;
+        }
+
+        input.addEventListener("input", function () {
+            showResults(input.value);
+        });
+
+        input.addEventListener("focus", function () {
+            if (input.value) {
+                showResults(input.value);
+            }
+        });
+
+        form.addEventListener("submit", function (e) {
+            if (!input.value.trim()) {
+                e.preventDefault();
+                input.focus();
+            }
+        });
+
+        if (toggle) {
+            toggle.addEventListener("click", function (e) {
+                e.preventDefault();
+                var open = !root.classList.contains("is-open");
+                root.classList.toggle("is-open", open);
+                toggle.setAttribute("aria-expanded", open ? "true" : "false");
+                if (open) {
+                    input.focus();
+                } else {
+                    hideResults();
+                }
+            });
+        }
+    }
+
+    function initSiteSearch() {
+        var widgets = document.querySelectorAll(".eden-search");
+        for (var i = 0; i < widgets.length; i++) {
+            bindSearch(widgets[i]);
+        }
+
+        document.addEventListener("click", function (e) {
+            var node = e.target;
+            var inside = false;
+            while (node && node !== document) {
+                if (node.classList && node.classList.contains("eden-search")) {
+                    inside = true;
+                    break;
+                }
+                node = node.parentNode;
+            }
+            if (inside) {
+                return;
+            }
+            var openWidgets = document.querySelectorAll(".eden-search.is-open");
+            for (var w = 0; w < openWidgets.length; w++) {
+                openWidgets[w].classList.remove("is-open");
+                var btn = openWidgets[w].querySelector(".eden-search-toggle");
+                if (btn) {
+                    btn.setAttribute("aria-expanded", "false");
+                }
+            }
+            var boxes = document.querySelectorAll(".eden-search-results");
+            for (var r = 0; r < boxes.length; r++) {
+                boxes[r].hidden = true;
+            }
+        });
+
+        var pageResults = document.getElementById("edenSearchPageResults");
+        var pageQuery = document.getElementById("edenSearchPageQuery");
+        if (pageResults) {
+            var q = "";
+            if (window.URLSearchParams) {
+                q = new URLSearchParams(window.location.search).get("q") || "";
+            } else if (window.location.search) {
+                var parts = window.location.search.replace(/^\?/, "").split("&");
+                for (var p = 0; p < parts.length; p++) {
+                    var pair = parts[p].split("=");
+                    if (decodeURIComponent(pair[0]) === "q") {
+                        q = decodeURIComponent((pair[1] || "").replace(/\+/g, " "));
+                    }
+                }
+            }
+            if (pageQuery) {
+                pageQuery.textContent = q ? 'Results for “' + q + '”' : "Search Eden Heights Villa";
+            }
+            var hits = searchPages(q);
+            var field = document.getElementById("edenSiteSearch");
+            if (field && q) {
+                field.value = q;
+            }
+            if (!q) {
+                pageResults.innerHTML = "<p>Type a word such as villa, tourism, packages, or booking.</p>";
+            } else if (!hits.length) {
+                pageResults.innerHTML = "<p>No matching pages. Try villa, tourism, booking, or contact.</p>";
+            } else {
+                pageResults.innerHTML = hits.map(function (page) {
+                    return '<a class="eden-search-hit" href="' + page.url + '"><strong>' + page.title + "</strong><span> " + page.blurb + "</span></a>";
+                }).join("");
+            }
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initSiteSearch);
+    } else {
+        initSiteSearch();
+    }
+
     document.addEventListener("click", function (e) {
         var panel = document.getElementById("edenMainNav");
         var btn = document.querySelector(".eden-menu-btn");

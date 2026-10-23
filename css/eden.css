@@ -1,5 +1,9 @@
 /* Eden Heights Villa — brand overrides */
 
+:root {
+    --eden-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='18' viewBox='0 0 120 18' fill='none'%3E%3Ccircle cx='8' cy='9' r='1.2' fill='%231a3a2a'/%3E%3Ccircle cx='22' cy='9' r='1.2' fill='%23f47231'/%3E%3Ccircle cx='36' cy='9' r='1.2' fill='%231a3a2a'/%3E%3Cpath d='M60 3.2 L66.2 9 L60 14.8 L53.8 9 Z' fill='%23f47231'/%3E%3Ccircle cx='84' cy='9' r='1.2' fill='%231a3a2a'/%3E%3Ccircle cx='98' cy='9' r='1.2' fill='%23f47231'/%3E%3Ccircle cx='112' cy='9' r='1.2' fill='%231a3a2a'/%3E%3C/svg%3E");
+}
+
 *,
 *::before,
 *::after {
@@ -231,8 +235,7 @@ iframe {
 /* Tourism destinations */
 .eden-tourism-cat {
     margin: 50px 0 20px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #1a3a2a;
+    padding-bottom: 8px;
 }
 
 .eden-tourism-cat h3 {
@@ -1884,6 +1887,140 @@ iframe {
     object-fit: contain;
 }
 
+#header-2.eden-header .eden-header-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+#header-2.eden-header .eden-search {
+    position: relative;
+    flex: 0 1 240px;
+    min-width: 0;
+}
+
+#header-2.eden-header .eden-search-toggle {
+    display: none;
+}
+
+#header-2.eden-header .eden-search-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#header-2.eden-header .eden-search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(26, 58, 42, 0.18);
+    border-radius: 999px;
+    padding: 0 6px 0 14px;
+}
+
+#header-2.eden-header .eden-search-input {
+    flex: 1;
+    min-width: 0;
+    height: 38px;
+    border: 0;
+    background: transparent;
+    color: #1a3a2a;
+    font-size: 14px;
+    outline: none;
+}
+
+#header-2.eden-header .eden-search-submit {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: #1a3a2a;
+    color: #fff;
+    cursor: pointer;
+}
+
+#header-2.eden-header .eden-search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 260;
+    background: #fff;
+    border: 1px solid rgba(26, 58, 42, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+    padding: 8px 0;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#header-2.eden-header .eden-search-results[hidden] {
+    display: none !important;
+}
+
+#header-2.eden-header .eden-search-results a {
+    display: block;
+    padding: 10px 14px;
+    color: #1a3a2a;
+    text-decoration: none;
+}
+
+#header-2.eden-header .eden-search-results a:hover,
+#header-2.eden-header .eden-search-results a:focus {
+    background: #f7f3ea;
+    color: #8a6d3b;
+}
+
+#header-2.eden-header .eden-search-results strong {
+    display: block;
+    font-size: 14px;
+}
+
+#header-2.eden-header .eden-search-results span {
+    display: block;
+    font-size: 12px;
+    color: #6b6b6b;
+    font-weight: 400;
+}
+
+#header-2.eden-header .eden-search-empty {
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #666;
+}
+
+.eden-search-page {
+    padding: 40px 0 80px;
+}
+
+.eden-search-page h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1a3a2a;
+    margin: 0 0 12px;
+}
+
+.eden-search-page .eden-search-hit {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+    color: #1a3a2a;
+    text-decoration: none;
+}
+
+.eden-search-page .eden-search-hit:hover {
+    color: #8a6d3b;
+}
+
 #header-2.eden-header .eden-nav {
     display: flex;
     align-items: center;
@@ -2003,6 +2140,50 @@ iframe {
 
     #header-2.eden-header .eden-menu-btn {
         display: inline-flex !important;
+    }
+
+    #header-2.eden-header .eden-header-end {
+        gap: 8px;
+    }
+
+    #header-2.eden-header .eden-search {
+        position: static;
+        flex: 0 0 auto;
+    }
+
+    #header-2.eden-header .eden-search-toggle {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(26, 58, 42, 0.18);
+        border-radius: 8px;
+        background: #fff;
+        color: #1a3a2a;
+        cursor: pointer;
+    }
+
+    #header-2.eden-header .eden-search-form {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 12px;
+        left: 12px;
+        width: auto;
+        border-radius: 12px;
+        padding: 8px 8px 8px 14px;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+        z-index: 260;
+    }
+
+    #header-2.eden-header .eden-search.is-open .eden-search-form {
+        display: flex;
+    }
+
+    #header-2.eden-header .eden-search-results {
+        left: 0;
+        right: 0;
     }
 
     #header-2.eden-header .eden-header-bar {
@@ -2495,44 +2676,46 @@ iframe {
     }
 }
 
-/* ========== Homepage embroidery between sections ========== */
-body.eden-home #header-2.eden-header,
-body.eden-home .eden-home-section,
-body.eden-home #footer {
+/* Dotted diamond band between pages / sections */
+#header-2.eden-header,
+.eden-home-section,
+#footer,
+#xp-footer {
     position: relative;
 }
 
-body.eden-home #header-2.eden-header::after,
-body.eden-home .eden-home-section::before,
-body.eden-home #footer::before {
+#header-2.eden-header::after,
+.eden-home-section::before,
+#footer::before,
+#xp-footer::before {
     content: "";
     display: block;
-    height: 28px;
+    height: 22px;
     width: 100%;
-    background-color: #f4efe6;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28' viewBox='0 0 96 28' fill='none'%3E%3Cpath d='M2 6h4M10 6h4M18 6h4M26 6h4M34 6h4M42 6h4M50 6h4M58 6h4M66 6h4M74 6h4M82 6h4M90 6h4' stroke='%231a3a2a' stroke-width='1.35' stroke-linecap='round'/%3E%3Cpath d='M2 22h4M10 22h4M18 22h4M26 22h4M34 22h4M42 22h4M50 22h4M58 22h4M66 22h4M74 22h4M82 22h4M90 22h4' stroke='%231a3a2a' stroke-width='1.35' stroke-linecap='round'/%3E%3Cpath d='M16 14l6-5 6 5-6 5z' fill='%23d4b06a' stroke='%238a6d3b' stroke-width='0.8'/%3E%3Cpath d='M48 14l6-5 6 5-6 5z' fill='%231a3a2a'/%3E%3Cpath d='M80 14l6-5 6 5-6 5z' fill='%23d4b06a' stroke='%238a6d3b' stroke-width='0.8'/%3E%3Cpath d='M36 11l6 6M42 11l-6 6' stroke='%238a6d3b' stroke-width='1.25' stroke-linecap='round'/%3E%3Cpath d='M68 11l6 6M74 11l-6 6' stroke='%238a6d3b' stroke-width='1.25' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-image: var(--eden-dots);
     background-repeat: repeat-x;
     background-position: center;
-    background-size: 96px 28px;
+    background-size: 120px 18px;
+    pointer-events: none;
 }
 
-body.eden-home #header-2.eden-header::after {
+#header-2.eden-header::after {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -14px;
+    bottom: -11px;
     z-index: 4;
-    pointer-events: none;
 }
 
 body.eden-home .eden-home-section {
     padding-top: 0 !important;
 }
 
-body.eden-home .eden-home-section::before {
-    margin: 0 0 28px;
+.eden-home-section::before {
+    margin: 0 0 22px;
 }
 
-body.eden-home #footer::before {
-    margin: 0 0 12px;
+#footer::before,
+#xp-footer::before {
+    margin: 0 0 10px;
 }
