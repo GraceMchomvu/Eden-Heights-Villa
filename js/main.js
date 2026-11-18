@@ -37,7 +37,7 @@
     });
 
     var pages = [
-        { title: "Home", url: "index.html", blurb: "Private Airbnb home in Kiserian, Mjohoroni, Arusha.", keys: "home villa airbnb arusha kiserian mjohoroni stay welcome" },
+        { title: "Home", url: "index.html", blurb: "Private Airbnb home in Kiseriani, Mjohoroni, Arusha.", keys: "home villa airbnb arusha kiserian mjohoroni stay welcome" },
         { title: "The Villa", url: "about-us.html", blurb: "Sitting room, bedroom, kitchen, hot shower, Wi-Fi, and breakfast.", keys: "villa house rooms kitchen bedroom sitting wifi breakfast fence" },
         { title: "Tourism", url: "tourism.html", blurb: "Northern Circuit parks, wildlife, mountains, lakes, and culture.", keys: "tourism safari serengeti ngorongoro kilimanjaro manyara tarangire parks trips" },
         { title: "Services", url: "our-services.html", blurb: "Amenities, extras, groceries, and food delivery.", keys: "services wifi kitchen groceries food delivery breakfast amenities" },
