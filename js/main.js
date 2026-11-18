@@ -43,7 +43,7 @@
         { title: "Services", url: "our-services.html", blurb: "Amenities, extras, groceries, and food delivery.", keys: "services wifi kitchen groceries food delivery breakfast amenities" },
         { title: "Packages", url: "our-packages.html", blurb: "Daily, weekly, monthly, honeymoon, and bridal stays.", keys: "packages daily weekly monthly discount honeymoon bridal sleepover price 120000" },
         { title: "Gallery", url: "photo-section.html", blurb: "Photos of the villa, rooms, and grounds.", keys: "gallery photos pictures images rooms" },
-        { title: "Contact", url: "contact-us.html", blurb: "Phone, email, WhatsApp, and directions.", keys: "contact phone email whatsapp elisheba goodluck echelesi 074506244 location" },
+        { title: "Contact", url: "contact-us.html", blurb: "Phone, email, WhatsApp, and directions.", keys: "contact phone email whatsapp elisheba goodluck echelesi 0745606244 location" },
         { title: "Book Stay", url: "booking-room-selector.html", blurb: "Start a booking for your private stay.", keys: "book booking stay reserve room dates" },
         { title: "Booking details", url: "booking-details.html", blurb: "Complete your villa booking details.", keys: "booking checkout details form" },
         { title: "Transport", url: "transport.html", blurb: "Airport transfers and local transport.", keys: "transport airport transfer driver car vehicle" }
